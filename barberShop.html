@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-US">   <!-- Declaring a language -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City Mizzue</title>
+  <link rel="icon" href="C:\Users\liewe\Desktop\html\shoe.jpg">
+  
+  <!-- boostrap -->
+</head>
+
+
+
+<style>
+<!-- reset all css -->
+body, header, div, nav{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+  header{
+    padding: 1px;
+    color: #ff8080;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    font-size: 32px;
+    font-family: Cursive;
+}
+
+footer{
+    padding: 1px;
+    color: black;
+    background-color:  #b3b300;
+    clear: left;
+    text-align: left;
+    <!-- font-size: 16px; -->
+    <!-- font-family: Cursive; -->
+}
+
+}
+.button-search{
+  background-image:url('/imagesStatic/searchIcon.png');
+  width:70px;
+  height:30px;
+  }
+.button-search:hover {
+  background-image:url('/imagesStatic/searchIconHover.png');   
+}
+
+#search-submit {
+  margin: 0;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #EEEEEE;
+}
+#search-input {
+  margin: 0;
+  width: 400px;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #EEEEEE;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 50%;
+}
+
+nav{
+    background-color: #ff9966;
+    clear: left;
+    text-align: left;
+    font-size: 16px;
+    padding: 16px 0 0 16px;
+    margin : 0 auto;
+    width: auto;
+    height: 100px;
+}
+
+nav li{
+  display: inline;
+  list-style: none;
+  float:left;
+  margin 0 12px;
+}
+
+nav li:first-child{
+  margin-left: 19px;
+}
+nav li a, li form{
+  display: block; 
+  width: 176px; 
+  height: 37px; 
+  padding: 20px 0 0 0;
+	background: url(images/btn.png) top no-repeat;
+  font: bold 18px Helvetica, Arial, Sans-serif; 
+  text-shadow: 0 -1px #1d1d1d;
+	color: #767676; 
+  text-align: left; 
+  text-decoration: none;
+}
+
+nav li a:hover, nav li a:focus {
+	color: #dcdcdc;
+}
+<!-- nav li a:active { -->
+  <!-- background: url(images/btn.png) bottom no-repeat; -->
+  <!-- color: #767676; -->
+<!-- } -->
+
+li > form{
+  display: inline;
+  margin-right: 10px;
+}
+
+li:last-child > form{
+  margin-right: 100px;
+}
+
+li:last-child{
+  float:right;
+}
+
+div.image.make-in-fit {
+  max-height: 200%;
+  max-width: 100%;
+  align:middle;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+    <!-- border: 2px solid #ccc; -->
+    <!-- float: middle; -->
+    <!-- width: 200px; -->
+}
+
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+#edit-overline{
+  text-decoration:line-through;
+  color: #999999;
+}
+
+body{
+  background-color: #e6fff2;
+}
+
+p.italic {
+    font-style: italic;
+    font-size: 12px;
+}
+
+p.normal {
+    font-style: normal;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#footer-inner { 
+  margin:auto; 
+  text-align:center; 
+  padding:12px; 
+  width:922px;
+}
+.loginform {
+  background-color: #00cc00;
+  margin: 0px;
+  padding-bottom:10px;
+  
+}
+
+.loginform ul {
+  padding: 10px;
+  margin: 10px
+  margin-bottom:10px;
+  
+}
+.loginform li {
+  display: inline;
+  float: left;
+}
+
+
+
+</style>
+
+<body>
+
+<header>
+   <p><img src="C:\Users\liewe\Desktop\html\shoe_orange.jpg" alt="shoe" 
+      width="60" height="50" hspace="9">City Mizzue</p>
+</header>
+
+<section class="loginform">
+<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+  <ul>
+    <li><label for="usermail">Email</label>
+    <input type="email" name="usermail" placeholder="yourname@email.com" required></li>
+    <li><label for="password">Password</label>
+    <input type="password" name="password" placeholder="password" required></li>
+    <li>
+    <input type="submit" value="Login"></li>
+  </ul>
+</form>
+</section>
+
+<nav>
+  <ul>
+    <li><a href="/Home/">Home</a>&nbsp;&nbsp;&nbsp;</li>
+    <!-- <li><a href="/login/signup/">Login / SignUp</a>&nbsp;&nbsp;&nbsp;&nbsp;</li> -->
+    <li>
+       <form id="search-form" name="search" action="/products" method="get">
+          <input id="search-input" name="search" type="text" placeholder="search from over 50000 products" >
+          <input id="search-submit" type="submit" class="button-search" value="search" />
+      </form>
+
+    </li>
+  </ul>
+</nav>
+
+<div class="image">
+<img class='make-in-fit' alt="sale" src="C:\Users\liewe\Desktop\html\title_sale.jpg">
+</div>
+
+
+<div class="img">
+  <a target="_blank" href="http://a3.zassets.com/images/z/3/8/7/3/2/1/3873216-p-MULTIVIEW.jpg">
+    <img src="http://a3.zassets.com/images/z/3/8/7/3/2/1/3873216-p-MULTIVIEW.jpg" alt="Nine West Nobody" width="800" height="600">
+  </a>
+  <div class="desc">Nine West Nobody discount：<b>40%</b> RM133.14 was <p id="edit-overline" >RM221.90</p></div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="http://a1.zassets.com/images/z/1/0/4/6/7/4/1046740-p-MULTIVIEW.jpg">
+    <img src="http://a1.zassets.com/images/z/1/0/4/6/7/4/1046740-p-MULTIVIEW.jpg" alt="Women's Spring Summer Fall Platform Wedding Stiletto Heel Platform Black Pink Ivory White" width="800" height="600">
+  </a>
+  <div class="desc">Wedding Stiletto Heel discount：<b>62%</b> RM102.86 was <p id="edit-overline" >RM270.70</p></div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="http://a3.zassets.com/images/z/1/0/6/0/8/9/1060890-p-MULTIVIEW.jpg">
+    <img src="http://a3.zassets.com/images/z/1/0/6/0/8/9/1060890-p-MULTIVIEW.jpg" alt="reef sandal" width="800" height="600">
+  </a>
+  <div class="desc">Reef Krystal Star Sandal discount：<b>20%</b> RM24.72 was <p id="edit-overline" >RM30.90</p></div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="http://a2.zassets.com/images/z/3/5/2/9/6/2/3529624-p-MULTIVIEW.jpg">
+    <img src="http://a2.zassets.com/images/z/3/5/2/9/6/2/3529624-p-MULTIVIEW.jpg" alt="office wear" width="800" height="600">
+  </a>
+  <div class="desc">Ralph Lauren Cecilia Sandal discount：<b>30%</b> RM84.00 was <p id="edit-overline" >RM120.00</p></div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="http://a1.zassets.com/images/z/3/9/5/9/3/3/3959332-p-MULTIVIEW.jpg">
+    <img src="http://a1.zassets.com/images/z/3/9/5/9/3/3/3959332-p-MULTIVIEW.jpg" alt="kate spade heel" width="800" height="600">
+  </a>
+  <div class="desc">Kate Spade Heel discount：<b>20%</b> RM480.00 was <p id="edit-overline" >RM600.00</p></div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/></br></br>
+<b>Click <a href="/men shoes/">here</a> visit Men's Shoes.</b>
+<br/>
+<div class="img">
+  <a target="_blank" href="http://a3.zassets.com/images/z/4/0/5/3/1/8/4053187-p-MULTIVIEW.jpg">
+    <img src="http://a3.zassets.com/images/z/4/0/5/3/1/8/4053187-p-MULTIVIEW.jpg" alt="Calvin Klein Jeans Zeus" width="800" height="600">
+  </a>
+  <div class="desc">Calvin Klein Jeans Zeus discount：<b>50%</b> RM350.00 was <p id="edit-overline" >RM700.00</p></div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="http://a3.zassets.com/images/z/3/8/1/7/1/9/3817190-p-MULTIVIEW.jpg">
+    <img src="http://a3.zassets.com/images/z/3/8/1/7/1/9/3817190-p-MULTIVIEW.jpg" alt="Clarks Becken Plain" width="800" height="600">
+  </a>
+  <div class="desc">Clarks Becken Plain discount：<b>50%</b> RM320.00 was <p id="edit-overline" >RM640.00</p></div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="http://a1.zassets.com/images/z/3/8/1/0/2/7/3810277-p-MULTIVIEW.jpg">
+    <img src="http://a1.zassets.com/images/z/3/8/1/0/2/7/3810277-p-MULTIVIEW.jpg" alt="adidas" width="800" height="600">
+  </a>
+  <div class="desc">adidas Cloudfoam discount：<b>50%</b> RM140.00 was <p id="edit-overline" >RM380.00</p></div>
+</div>
+<footer>
+  <p class="normal">contact us</p>
+  <p class="italic">phone number: <a href="tel:+6014-1234567">+6014-1234567</a>.</p>
+  <p class="italic">Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+  <p class="italic">location:</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127498.97169650806!2d101.55778008461047!3d3.0020702454757022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb4858700458b%3A0x450f0f6588f66ff!2sPuchong%2C+Selangor!5e0!3m2!1sen!2smy!4v1487582811185" \
+  width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div id="footer-inner">
+		<p>&copy; Copyright <a href="#">Your Site</a> &#124; <a href="#">Terms of Use</a> &#124; <a href="#">Privacy Policy</a></p>
+		<div class="clr"></div>
+  </footer>
+
+</body>
+
+

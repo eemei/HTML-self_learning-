@@ -1,0 +1,173 @@
+<!-- 
+@ web page for learning board
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">   <!-- Declaring a language -->
+<head>
+<title>My Webpage</title>
+</head>
+
+<!-- edited style -->
+<style>
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+p {color: black;
+	font-family:verdana;
+  font-size:100%;
+  text-align:center;
+  }
+#p01 {
+    color: blue;
+    text-align:middle;
+    font-size:200%;
+}
+#p02 {
+    color: black;
+    text-align:left;
+    font-size:100%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+td, th {
+    border: 1px solid #00b300;
+    text-align: middle;
+    padding: 8px;
+}
+tfoot {color:red;}  
+</style> 
+
+<!-- content of body -->
+<body style="background-color:powderblue;">
+<!-- horizontal scope bar -->
+<!-- <div style="width:1500px;overflow:auto"> -->
+
+<!-- checking browser support javascript -->
+<p id="displayScript"></p>
+<script>
+  document.getElementById("displayScript").innerHTML = "welcome to MyWebpage ^@^";
+  function myFunction() {
+    document.getElementById("problem").innerHTML = "any problem ?";
+  }
+
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+
+<!-- define the webpage  -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+<meta charset="UTF-8">
+<meta name="description" content="Free Web">
+<meta name="keywords" content="dummy">
+<meta name="author" content="ee mei">
+<meta http-equiv="refresh" content="30">  <!-- refresh web every 30s-->
+<!-- display heading title 
+@     id = upper 
+-->
+<h1 id="upper" style="color:red";>learning board</h1>   <!-- until h6 -->
+      
+<hr noshade size="30">
+<p><b><abbr title="is a programming language">JAVAScript</abbr> language.</b></p>
+<a href="http://www.w3schools.com" title="more information">please click this link http://www.w3schools.com</a>
+<!-- image -->
+<p><img src="C:\Users\liewe\Desktop\html\images.png" alt="banana" 
+     align="middle" width="180" height="200" style="border:6px solid yellow" 
+     hspace="20"> WELCOME. </p>
+<br/>
+<p id="p01">welcome</p>
+<a href="#upper">Go to top</a><br/>
+<a href="javascript:alert('please logout!');">login</a>
+<!-- table -->
+<table>
+  <colgroup> <!-- column-->
+    <col span=1" style="background-color:pink">
+    <col style="background-color:yellow">
+        <col style="background-color:pink">
+  </colgroup>
+  <tr>
+    <th>No</th>
+    <th>Date</th>
+    <th>Attended</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>13/2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>14/2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>15/2</td>
+    <td>1</td>
+  </tr>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>3</td>
+    </tr>  
+  </tfoot>
+  
+</table>  
+<p>please click into link and it will open in the frame</p>
+<iframe height="700px" width="100%" 
+        src="demo_iframe.htm" 
+        name="iframe_a"
+        style="border:5px solid black;">
+</iframe>
+<p><a href="http://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+
+<!-- The Box:<input type="text" id="thebox" value="" size=10> -->
+<!-- <br><input type="button" value="What's in the box?" onclick="document.getElementById('thebox').innerHTML='head of gwyneth paltrow';"> -->
+<br>
+<button type="button" onclick="myFunction()">click me</button>
+<p id="problem"></p>
+<br>
+<p id="p02"> what is your favorite programming? </p>
+<form>
+  <input type="radio" name="language" value="c" checked>c<br>
+  <input type="radio" name="language" value="java"> java<br>
+  <input type="radio" name="language" value="other"> other  
+</form> 
+
+<input type="text" value="John" disabled>
+<br>
+<div class="img">
+  <a target="_blank" href="C:\Users\liewe\Desktop\html\elephant.jpg">
+    <img src="C:\Users\liewe\Desktop\html\elephant.jpg" alt="elephant" width="300" height="200">
+  </a>
+  <div class="desc">elephant</div>
+</div>
+
+<!-- </div> -->
+</body>
+</html>
